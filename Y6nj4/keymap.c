@@ -273,3 +273,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   }
   return true;
 }
+
+// https://github.com/qmk/qmk_firmware/issues/15458#issuecomment-3411269215
+bool get_custom_auto_shifted_key(uint16_t keycode, keyrecord_t *record) {
+    if (IS_RETRO(keycode))
+        return true;
+
+    switch (keycode) {
+        case QK_MOD_TAP ... QK_MOD_TAP_MAX:
+            return true;
+        default:
+            return false;
+    }
+}
