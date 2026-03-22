@@ -1,8 +1,10 @@
 #define ONESHOT_TAP_TOGGLE 2
 
+#define PERMISSIVE_HOLD
+
 #define USB_SUSPEND_WAKEUP_DELAY 0
 #define AUTO_SHIFT_TIMEOUT 135
-#define SERIAL_NUMBER "Y6nj4/B4W90D"
+#define SERIAL_NUMBER "Y6nj4/rbADmw"
 #define LAYER_STATE_8BIT
 #define HCS(report) host_consumer_send(record->event.pressed ? report : 0); return false
 
